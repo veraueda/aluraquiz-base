@@ -22,7 +22,7 @@ import Button from '../src/components/Button';
 //`;
 
 //const QuizContainer = styled.div`
-//  width: 100%;
+//  width: 100%
 //  max-width: 350px;
 //  padding-top: 45px;
 //  margin: auto 10%;
@@ -30,16 +30,19 @@ import Button from '../src/components/Button';
 //    margin: auto;
 //    padding: 15px;
 //  }
-//`;
+// `;
 
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
-  //console.log('retorno do useState ', name, setName);
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <Head>
-        <title>AluraQuiz - Modelo Base</title>
+        <title>
+          AluraQuiz -
+          {db.title}
+        </title>
       </Head>
       <QuizContainer>
         <QuizLogo />
@@ -48,13 +51,15 @@ export default function Home() {
             <h1>#JavaScriptQuiz</h1>
           </Widget.Header>
           <Widget.Content>
+            <p>{db.description}</p>
             <form onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
               console.log('Fazendo uma submissão por meio do react');
             }}
             >
-              <Input name="nomeDoUsuario"
+              <Input
+                name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
                 placeholder="Entre com seu nome"
                 value={name}

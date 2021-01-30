@@ -25,15 +25,9 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
   }
-`
+`;
 
-const theme = db.theme;
-
-//const theme = {
-//  colors: {
-//    primary: '#0070f3',
-//  },
-//}
+const {theme} = db;
 
 // eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
