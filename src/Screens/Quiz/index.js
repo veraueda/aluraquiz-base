@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
@@ -224,4 +225,3 @@ export default function QuizPage({ externalQuestions, externalBg }) {
     </QuizBackground>
   );
 }
-© 2021 GitHub, Inc.
